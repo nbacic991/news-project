@@ -1,0 +1,53 @@
+.contact {
+  margin-top: 40px;
+  .findus {
+    .block-info {
+      background: linear-gradient(#098cff,#3B5998);
+      color: #fff;
+      padding-top: 5px;
+      box-shadow: 0 1px 2px #ccc;
+      .info{
+        background-color: #fff;
+        color: #222;
+        width: 100%;
+        max-height: 0;
+        line-height: 2;
+        overflow: hidden;
+        box-sizing: border-box;
+        transition: 500ms;
+        iframe {
+          width: 100%;
+        }
+        p {
+          margin: 10px 0;
+          padding: 0 15px;
+          text-align: center;
+          font-size: 22px;
+          font-family: Open Sans, sans-serif;
+        }
+      }
+      .info.shown {
+        max-height: 500px;
+        height: 100%;
+      }
+    }
+    input[type='radio']{
+      width: 100%;
+      display: none;
+    }
+
+    label{
+      width: 450px;
+      max-width: 100%;
+      cursor: pointer;
+    }
+    span{
+      font-family: Open Sans, sans-serif;
+      font-weight: bold;
+      display: block;
+      padding: 10px 12px 12px 15px;
+      margin: 0;
+      cursor: pointer;
+    }
+  }
+}

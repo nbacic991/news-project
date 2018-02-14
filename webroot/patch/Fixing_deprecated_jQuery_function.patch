@@ -1,0 +1,16 @@
+Index: modules/contrib/fivestar/assets/js/fivestar.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- modules/contrib/fivestar/assets/js/fivestar.js	(date 1514366340000)
++++ modules/contrib/fivestar/assets/js/fivestar.js	(date 1514366350000)
+@@ -56,7 +56,7 @@
+       } else {
+         $this_star = $this.closest('.star');
+       }
+-      $this_star.prevAll('.star').andSelf().addClass('on');
++      $this_star.prevAll('.star').addBack().addClass('on');
+       $this_star.nextAll('.star').removeClass('on');
+       if (value === 0) {
+         $this_star.removeClass('on');

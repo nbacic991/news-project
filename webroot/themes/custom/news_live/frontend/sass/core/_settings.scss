@@ -1,0 +1,121 @@
+// ========================================
+//
+// @file _settings.scss
+// Fonts, colors, breakpoints and other various variables
+//
+// ========================================
+
+// - - - - - - - - - - - - - - - - - - - -
+// Base font size
+// - - - - - - - - - - - - - - - - - - - -
+$base-font-size: 16px;
+
+// - - - - - - - - - - - - - - - - - - - -
+// Colors
+// - - - - - - - - - - - - - - - - - - - -
+$color-white: white;
+$color-black: black;
+
+// Custom colors
+$color-dark: #1c1c1c;
+$color-dark-light: #191a1d;
+$color-dark-lighter: #282828;
+$color-red: #ec0000;
+$color-l-red: #d82731;
+$color-orange: #d9603b;
+$color-blue: #007fef;
+$color-purple: #9401d3;
+$color-cyan: #00bdb3;
+$color-green: #32b336;
+$color-dark-gray: #606060;
+$color-gray: #a3a3a3;
+$color-menu-gray: #515151;
+
+// - - - - - - - - - - - - - - - - - - - -
+// Fonts
+// - - - - - - - - - - - - - - - - - - - -
+$font-open-sans: 'Open Sans', sans-serif;
+$font-roboto-sans: 'Roboto',sans-serif;
+$font-fontAwesome: 'FontAwesome';
+$font-pt-sans: 'PT Sans', sans-serif;
+
+// - - - - - - - - - - - - - - - - - - - -
+// Overrides
+// - - - - - - - - - - - - - - - - - - - -
+#toolbar-administration {
+  height: 80px;
+}
+
+.feed-icons {
+  display: none;
+}
+.menu-item--expanded {
+  list-style-image: none;
+  list-style-type: none;
+}
+.block-page-title-block {
+  display: none;
+}
+.view-id-frontpage {
+  display: none;
+}
+.password-suggestions,
+.password-strength,
+#edit-captcha-response--description {
+  display: none !important;
+}
+.js-form-type-password {
+  div.password-confirm {
+    display: none !important;
+  }
+}
+
+
+//Newsletter messages
+.success,
+.fail {
+  position: absolute;
+  top: 35px;
+  padding: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-transition: 300ms;
+  -moz-transition: 300ms;
+  -ms-transition: 300ms;
+  -o-transition: 300ms;
+  transition: 300ms;
+  p {
+    margin: 0;
+    font-family:'Roboto', sans-serif;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -18px;
+    left: 25px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+  }
+}
+.success {
+  top: 60px;
+  background-color: rgb(223,242,191);
+  p {
+    color: #4F8A10;
+  }
+  &::after {
+    border-top: 20px solid rgb(223,242,191);
+  }
+}
+.fail {
+  background-color: rgb(255,210,210);
+  p {
+    color: #D8000C;
+  }
+  &::after {
+    border-top: 20px solid rgb(255,210,210);
+  }
+}

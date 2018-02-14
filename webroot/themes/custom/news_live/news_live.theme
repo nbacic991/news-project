@@ -1,0 +1,145 @@
+<?php
+/**
+ * Implements hook_form_alter().
+ *
+ * @param $form
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ * @param $form_id
+ */
+use Drupal\Core\Controller\ControllerBase;
+
+function news_live_form_alter(&$form, &$form_state, $form_id)  {
+	if ($form_id == 'user_register_form') {
+		$form['actions']['submit']['#value'] = t('Register');
+		$form['required'] = array(
+			'#prefix' => '<p class="register-required">',
+			'#markup' => ('* Required field'),
+			'#suffix' => '</p>',
+			'#weight' => -10,
+
+		);
+		$form['cancel'] = array(
+			'#markup' => t('Cancel'),
+			'#prefix' => '<a id="edit-cancel" href="/">',
+			'#suffix' => '</a>',
+			'#weight' => 10,
+		);
+	}
+	if ($form_id == 'contact_message_feedback_form') {
+		$form['actions']['submit']['#value'] = t('Send email');
+		$form['required'] = array (
+			'#markup' => '<p class="required-field"><span>*</span>Required field</p>',
+			'#weight' => -1,
+		);
+	}
+	if ($form_id == 'user_login_form') {
+		$form['remember'] = array(
+			'#type' => 'checkbox',
+			'#title' => t('Remember me'),
+			'#value' => 0,
+		);
+		$form['forgott-password'] = array (
+			'#prefix' => '<div class="forgot">',
+			'#markup' => '<a id="edit-cancel" href="/user/password">Forgott your username?</a>',
+			'#suffix' => '</a>',
+			'#weight' => 100,
+		);
+		$form['forgott-username'] = array (
+			'#markup' => '<a id="edit-cancel" href="/user/password">Forgott your username?</a>',
+			'#weight' => 100,
+		);
+		$form['don\'t-have-account'] = array (
+			'#markup' => '<a id="edit-cancel" href="/user/password">Don\'t have an account ?</a>',
+			'#suffix' => '</div>',
+			'#weight' => 100,
+		);
+	}
+}
+
+/**
+ * Implements hook_theme_suggestions_page_alter() to set 40x template suggestions.
+ *
+ * @param array $suggestions
+ * @param array $variables
+ */
+function news_live_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+	$path_args = explode('/', trim(\Drupal::service('path.current')->getPath(), '/'));
+	$suggestions = theme_get_suggestions($path_args, 'page');
+	$http_error_suggestions = [
+		'system.401' => 'page__401',
+		'system.403' => 'page__403',
+		'system.404' => 'page__404',
+	];
+
+	$route_name = \Drupal::routeMatch()->getRouteName();
+	if (isset($http_error_suggestions[$route_name])) {
+		$suggestions[] = $http_error_suggestions[$route_name];
+	}
+}
+
+/**
+ * Implements hook_theme_form_alter to set placeholder text
+ * @param $form
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ */
+function news_live_form_search_block_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+	$form['keys']['#attributes']['placeholder'] = t('Search...');
+}
+
+function news_live_theme($existing, $type, $theme, $path) {
+	return [
+		'news_live' => array(
+			'template' => 'popular_news',
+			'variables' => [
+				'content' => [],
+			],
+		),
+	];
+}
+
+/**
+ * Showing current page in breadcrumb
+ */
+function news_live_preprocess_breadcrumb(&$variables) {
+	if (($node = \Drupal::routeMatch()->getParameter('node')) && $variables['breadcrumb']) {
+		$variables['breadcrumb'][] = array(
+			'text' => $node->getTitle(),
+			'url' => $node->URL()
+		);
+
+	}
+}
+
+
+/**
+ * Implements hook_preprocess_node to set hits field
+ * @param $variables
+ */
+function news_live_preprocess_node(&$variables) {
+	$query = \Drupal::database()->select( 'node_field_data', 'n' );
+	$query->condition( 'n.nid', $variables['node']->id(), '=' );
+	$query->innerJoin( 'node_counter', 'nc',
+		'nc.nid = n.nid' );
+	$query->addField( 'nc', 'totalcount', 'tc' );
+
+	$result = $query->execute()->fetchField();
+
+	$variables['content']['hits'] = [
+		'#markup' => $result,
+		'#cache'  => array(
+			'max-age' => '0',
+		)
+	];
+}
+
+/**
+ * Implements hook_preprocess_block to set class to every block
+ */
+
+function news_live_preprocess_block(&$variables) {
+
+	$block_id = $variables['elements']['#id'];
+
+	$variables['attributes']['class'] = $block_id;
+
+}

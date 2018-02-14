@@ -1,0 +1,269 @@
+// ========================================
+//
+// @file _footer.scss
+// Footer element on the page
+//
+// ========================================
+
+
+
+footer {
+  background-color: #191a1d;
+  color: $color-white;
+  margin-top: 27px;
+  .region-footer-top {
+    border-bottom: 1px solid $color-dark-gray;
+    padding: 70px 15px 60px;
+    overflow: hidden;
+    #block {
+      &-footerbranding {
+        float: left;
+        padding-left: 0;
+        padding-right: 47px;
+      }
+      &-footerbrandingtext {
+        font-family: Open Sans,sans-serif;
+        font-weight: normal;
+        font-size: 13px;
+        width: 41.66666667%;
+        padding: 0 15px;
+        float: left;
+        p {
+          margin: 0;
+        }
+      }
+      &-footericons {
+        width: 33.33333333%;
+        float: left;
+        padding-left: 28px;
+        .field--name-field-phone-number,
+        .field--name-field-email- {
+          display: inline-block;
+          a {
+            font-family: $font-open-sans;
+            font-weight: normal;
+            font-size: 13px;
+            color: $color-white;
+            &:before {
+              color: $color-white;
+              display: inline-block;
+              @include fontawesome-icon;
+              margin-right: 5px;
+            }
+          }
+        }
+        .field {
+          &--name-field-phone-number {
+            a {
+              &::before {
+                content: '\f095';
+              }
+            }
+          }
+          &--name-field-email- {
+            margin-left: 10px;
+            a {
+              &::before {
+                content: '\f003';
+              }
+            }
+          }
+        }
+        .item-list--linkicon {
+          margin-top: 20px;
+          ul {
+            li {
+              margin: 0 6px 6px 0;
+              display: inline-block;
+              background-color: $color-dark-lighter;
+              transition: .4s ease-in-out;
+              list-style-type: none;
+              width: 32px;
+              height: 32px;
+              text-align: center;
+
+              a {
+                line-height: 32px;
+                color: $color-white;
+                text-align: center;
+              }
+              &:hover {
+                background-color: $color-blue;;
+              }
+              .linkicon__text {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+
+
+    }
+  }
+  .footer-middle {
+    overflow: hidden;
+    .region-footer-middle {
+      overflow: hidden;
+      padding-top: 66px;
+      padding-bottom: 62px;
+      .footertaxonomy,
+      .tags,
+      .popularnews,
+      .trendingnow {
+        float: left;
+        width: 25%;
+        overflow: hidden;
+        h2 {
+          font-family: Roboto,sans-serif;
+          font-size: 16px;
+          color: $color-white;
+          padding-left: 0;
+          margin: 0 0 24px;
+        }
+        ul {
+          padding: 0;
+          margin: 0;
+        }
+      }
+      .footertaxonomy {
+        padding-left: 8px;
+        padding-right: 33px;
+        .top,
+        .bottom {
+          padding: 6px 0;
+        }
+        ul {
+          li {
+            display: block;
+            padding-bottom: 20px;
+            a {
+              color: $color-gray;
+              line-height: normal;
+              &:hover {
+                color: $color-blue;
+              }
+              span {
+                float: right;
+              }
+            }
+          }
+        }
+      }
+      .tags {
+        padding-left: 23px;
+        ul {
+          li {
+            display: inline-block;
+            margin: 5px;
+            a {
+              color: $color-white !important;
+              border: 1px solid rgba(255,255,255,0.1);
+              font-size: 12px;
+              padding: 5px 7px;
+              &:hover {
+                background-color: $color-blue;
+              }
+              span {
+                padding: 5px 7px;
+                margin-left: 6px;
+                background-color: rgba(0,0,0,0.25);
+                font-size: 9px;
+                width: 20px;
+                height: 20px;
+                border-radius: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+    .popularnews {
+      padding-left: 15px;
+    }
+    .trendingnow {
+      padding-left: 0;
+    }
+    .popularnews,
+    .trendingnow {
+      .single-news {
+        padding-bottom: 20px;
+        overflow: hidden;
+        .block-image{
+          max-width: 100px;
+          max-height: 67px;
+          width: 100%;
+          float: left;
+          margin-right: 10px;
+          img {
+            width: 90px;
+            height: 70px;
+          }
+        }
+        .block-title {
+          a {
+            color: $color-white;
+            font-size: 14px;
+            font-weight: normal;
+            font-family: Roboto,sans-serif;
+          }
+          p {
+            font-size: 12px;
+            margin-top: 4px;
+            color: $color-gray;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+  }
+  .footer-bottom {
+    overflow: hidden;
+    background-color: $color-blue;
+    .copyright {
+      overflow: hidden;
+      padding: 20px 0;
+      .region-footer-bottom {
+        font-family: Open Sans,sans-serif;
+        overflow: hidden;
+        margin: 0;
+        font-size: 13px;
+        #block {
+          &-copyright {
+            padding: 0 15px;
+            float: left;
+            width: 50%;
+            display: inline-block;
+            color: $color-white;
+            .field--name-body {
+              p {
+                margin-top: 0;
+              }
+            }
+          }
+          &-footer {
+            width: 50%;
+            float: left;
+            padding: 0 15px;
+            display: inline-block;
+            .menu {
+              margin: 0;
+              text-align: right;
+              .menu-item {
+                display: inline-block;
+                padding: 0;
+                a {
+                  color: rgba(255,255,255,0.9);
+                  padding: 0 0 0 9px;
+                  &:hover {
+                    color: $color-white;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

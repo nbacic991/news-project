@@ -1,0 +1,30 @@
+
+
+<div class="search-page-form">
+    <h2>Search for:</h2>
+    {{ form.form_build_id }}
+    {{ form.form_token }}
+    {{ form.form_id }}
+    {{ form }}
+</div>
+<div class="single-search-item">
+    <h2>Your results:</h2>
+    {% for entry in form['#content'].data %}
+        {% if entry is iterable %}
+            <div class="node__content">
+                <div class="header">
+                    <img src="{{ entry.image }}" alt="{{ entry.title }}" title="{{ entry.title }}"/>
+                    <a href="{{ entry.taxonomy }}">{{ entry.taxonomy }}</a>
+                </div>
+                <h2><a href="{{ entry.title }}">{{ entry.title }}</a></h2>
+                <div class="node__meta">
+                    <a href="{{ entry.user }}">{{ entry.user }}</a>
+                    <p>{{ entry.created }}</p>
+                </div>
+                <p class="node-body">{{ entry.body }}</p>
+            </div>
+        {% endif %}
+    {% endfor %}
+</div>
+
+{{ form.pager }}

@@ -1,0 +1,118 @@
+.lifestyle,
+.technology,
+.search-page {
+  .node__content {
+    overflow: hidden;
+    margin-bottom: 41px;
+    &.first {
+      margin-bottom: 48px;
+      .header {
+        max-width: 100%;
+        width: 100%;
+        float: none;
+        margin-bottom: 29px;
+      }
+      h2 {
+        font-size: 26px;
+        line-height: 36px;
+      }
+    }
+    .header {
+      position: relative;
+      float: left;
+      max-width: 300px;
+      width: 100%;
+      margin-right: 30px;
+      img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
+      a {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        color: #fff;
+        font-family: Open Sans,sans-serif;
+        font-size: 10px;
+        text-transform: uppercase;
+        line-height: 20px;
+        background-color: #007fef;
+        padding: 0 5px;
+      }
+    }
+    h2 {
+      margin-top: 0;
+      font-size: 20px;
+      line-height: 30px;
+      font-family: Roboto,sans-serif;
+      font-weight: 700;
+      margin-bottom: 11px;
+      a {
+        color: #1c1c1c;
+        &:hover {
+          color: #007fef;
+        }
+      }
+    }
+    .node__meta {
+      line-height: 12px;
+      font-size: 12px;
+      a {
+        display: inline-block;
+        font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+        line-height: 14px;
+        border-right: 1px solid #dedede;
+        padding-right: 8px;
+        margin-right: 5px;
+        color: #1c1c1c;
+        font-weight: 700;
+      }
+      p {
+        display: inline-block;
+        color: #a3a3a3;
+        margin: 0 8px 0 0;
+        &::before {
+          display: inline-block;
+          margin-right: 3px;
+          margin-top: 2px;
+          @include fontawesome-icon;
+          content: '\f017';
+        }
+      }
+    }
+    .node-body {
+      margin-top: 9px;
+      font-family: Open Sans,sans-serif;
+      font-weight: normal;
+      line-height: 24px;
+      font-size: 14px;
+    }
+
+  }
+  .pager {
+    overflow: hidden;
+    .pager__items {
+      margin-top: 35px;
+      padding-left: 0;
+      .pager__item {
+        float: left;
+        padding-left: 3px;
+        a {
+          position: relative;
+          padding: 6px 12px;
+          margin-left: -1px;
+          line-height: 1.42857143;
+          color: #515151;
+          text-decoration: none;
+          background-color: #fff;
+          border: 1px solid #ddd;
+          &:hover {
+            background-color: #007fef;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}

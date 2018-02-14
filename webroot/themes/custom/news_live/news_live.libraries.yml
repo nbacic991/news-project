@@ -1,0 +1,19 @@
+# Global CSS files
+global-css:
+  version: 1.x
+  css:
+    theme:
+      frontend/assets/stylesheets/application.css:
+        minified: false
+
+# Global JS files
+global-js:
+  version: 1.x
+  js:
+    js/jquery.cycle/jquery.cycle.all.js:
+    js/bxSlider/jquery.bxslider.min.js:
+    frontend/assets/scripts/application.js:
+      minified: false
+  dependencies:
+    - core/jquery
+    - core/jquery.once

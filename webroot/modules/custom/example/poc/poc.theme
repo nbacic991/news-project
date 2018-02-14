@@ -1,0 +1,14 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the poc theme.
+ */
+
+function poc_theme ( $existing, $type, $theme, $path ) {
+	return [
+		'search_page' => [
+			'render element' => 'form',
+		],
+	];
+}

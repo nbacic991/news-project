@@ -1,0 +1,587 @@
+// ========================================
+//
+// @file _responsive.scss
+// All blocks and pages responsive behavior
+//
+// ========================================
+
+//Tablet screen width
+@media (max-width: 1200px) {
+
+  body {
+    .container,
+    .region-slider-top,
+    .region-header-second,
+    .region-branding{
+      max-width: 970px;
+    }
+    #block-healthtravelblock {
+      .health-travel-block {
+        .health-item,
+        .travel-item {
+          max-width: 300px;
+          width: 50%;
+          padding-right: 25px;
+          .single-travel-item.first,
+          .single-health-item.first {
+            .header {
+              img {
+                max-width: 100%;
+                width: 100%;
+                height: 100%;
+              }
+            }
+          }
+          .single-travel-item,
+          .single-health-item {
+            .header {
+              img {
+                max-width: 100px;
+                width: 100%;
+                min-height: 75px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+
+
+@media (max-width: 768px) {
+
+  body {
+    .layout-container {
+      .single-page {
+        .layout-content {
+          width: 100%;
+          padding-right: 0;
+          float: none;
+        }
+        .layout-sidebar {
+          width: 100%;
+          padding-left: 0;
+        }
+      }
+      .region-slider-top {
+        .title-slider-wrapper {
+          p {
+            float: none;
+            display: inline-block;
+            margin-bottom: 8px;
+          }
+          .title-slider {
+            float: none;
+          }
+        }
+      }
+      //Header second reagion
+      .region-header-second {
+        overflow: hidden;
+        text-align: center;
+        #block-bannerdate {
+          display: block;
+          width: 100%;
+          float: none;
+        }
+        #block-bannerlogin {
+          overflow: hidden;
+          display: block;
+          float: none;
+          width: 100%;
+          ul {
+            float: none;
+          }
+        }
+        #block-bannericons {
+          display: block;
+          float: none;
+          width: 100%;
+          padding: 0;
+          ul {
+            text-align: center;
+            border: 0;
+          }
+        }
+      }
+      //Branding region
+      .region-branding {
+        #block-news-live-branding {
+          .site-logo {
+            width: 100%;
+            img {
+              margin: auto;
+            }
+          }
+        }
+      }
+      //Main content region
+      .layout-content {
+        max-width: 100% !important;
+        padding-right: 0;
+        #block-popularnewsfront {
+          .technology,
+          .lifestyle {
+            .single-tech-item,
+            .single-life-item {
+              max-width: 100%;
+              width: 100%;
+              float: left;
+              clear: both;
+            }
+          }
+        }
+        #block-healthtravelblock {
+          .single-travel-item.first,
+          .single-health-item.first {
+            max-width: 100%;
+          }
+        }
+      }
+      //main content search page
+      .search-page {
+        .search-page-form {
+          .js-form-type-textfield {
+            max-width: 100%;
+            float: none;
+          }
+          #edit-submit {
+            margin: auto;
+            display: block;
+            float: none;
+          }
+          .lifestyle,
+          .technology {
+            text-align: center;
+          }
+          #edit-lifestyle-terms,
+          #edit-technology-terms {
+            .form-item {
+              float: none;
+              width: 100%;
+              margin: 20px 0;
+            }
+          }
+        }
+      }
+      //Sidebar first region
+      .layout-sidebar {
+        max-width: 100%;
+        padding: 0;
+      }
+      #block-mostviewed {
+        .single-news.first {
+          max-width: 100%;
+        }
+      }
+      .trending-news-slider {
+        #side-slide {
+          .trending-news-slide {
+            .single-slide-item {
+              .body {
+                .title {
+                  display: block;
+                }
+              }
+            }
+          }
+        }
+      }
+      .layout-sidebar-bottom {
+        .trending-news-slider {
+          overflow: hidden;
+          .single-slide-item {
+            float: none !important;
+            max-width: 100% !important;
+            width: 100%;
+            min-height: 100%;
+          }
+        }
+      }
+      //Videos region
+      #block-videosfrontblock {
+        .videos-front {
+          .videos-item {
+            .single-video-item {
+              float: none;
+              width: 100%;
+            }
+          }
+        }
+      }
+      #block-morenews {
+        .more-news-items {
+          .single-more-news-item {
+            .header {
+              width: 100%;
+              float: none;
+            }
+            .body {
+              padding-top: 20px;
+              padding-left: 0;
+            }
+          }
+        }
+      }
+      //Rating
+      .tr-w {
+        .field--name-field-rating {
+          float: none;
+          margin-top: 20px;
+          padding-top: 20px;
+        }
+      }
+      //Footer region
+      footer {
+        .region-footer-middle {
+          #block-trendingnow,
+          #block-footertaxonomy,
+          #block-popularnews,
+          #block-tags {
+            width: 100% !important;
+          }
+
+        }
+        .footer-bottom {
+          .copyright {
+            .region-footer-bottom {
+              #block-copyright,
+              #block-footer {
+                text-align: center;
+                float: none;
+                width: 100%;
+                .menu {
+                  text-align: center;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+}
+
+@media (max-width: 991px) {
+  body {
+    line-height: normal;
+  }
+
+  #block-healthtravelblock {
+    .health-travel-block {
+      .health-item,
+      .travel-item {
+        .single-health-item.first,
+        .single-travel-item.first {
+          .header {
+            max-height: 100%;
+          }
+        }
+      }
+    }
+  }
+  footer  {
+    .region-footer-top {
+      #block-footerbranding {
+        padding: 0 50px;
+      }
+      #block-footerbrandingtext,
+      #block-footericons {
+        padding: 0;
+        line-height: 24px;
+      }
+      #block-footericons {
+        margin-top: 5px;
+      }
+      #block-footerbranding,
+      #block-footerbrandingtext,
+      #block-footericons {
+        float: none;
+        width: 100%;
+      }
+    }
+    .footer-middle {
+      .region-footer-middle {
+        #block-footertaxonomy,
+        #block-tags,
+        #block-popularnews,
+        #block-trendingnow {
+          width: 50%;
+          margin-bottom: 30px;
+          float: none;
+          padding-left: 0;
+        }
+        #block-tags {
+          ul {
+            li {
+              margin: 8px;
+            }
+          }
+        }
+      }
+    }
+
+    .footer-bottom {
+      .copyright {
+        .region-footer-bottom {
+          #block-footer {
+            .menu {
+              text-align: left;
+            }
+          }
+        }
+      }
+
+    }
+  }
+  .toTop {
+    right: 25px;
+  }
+
+  .layout-container {
+    -moz-transition:all 200ms ease-in;
+    -webkit-transition:all 200ms ease-in;
+    -o-transition:all 200ms ease-in;
+    transition:all 200ms ease-in;
+    //Single node main content region
+    .single-page {
+      .layout-content {
+        width: 66.66666667%;
+        padding-right: 15px;
+        float: left;
+      }
+      .layout-sidebar {
+        width: 33.33333333%;
+        padding-left: 15px;
+      }
+    }
+    .region-header-second {
+      overflow: hidden;
+      #block-bannerdate {
+        display: inline-block;
+        width: 66.66666667%;
+        float: left;
+      }
+      #block-bannerlogin {
+        float: left;
+        width: 16.66666667%;
+      }
+      #block-bannericons {
+        float: left;
+        width: 16.66666667%;
+        padding: 0 15px;
+      }
+    }
+    .region-branding {
+      padding-top: 30px;
+      margin: auto;
+      #block-news-live-branding {
+        height: 42px;
+        .site-logo {
+          width: 22%;
+        }
+      }
+    }
+    .slider {
+      #block-homepageslider {
+        width: 100%;
+        .front-page-slider {
+          #slideshow {
+            max-width: 100%;
+            height: 100%;
+            .slide {
+              max-width: 100% !important;
+              img {
+                max-width: 100% !important;
+              }
+            }
+          }
+        }
+      }
+      #block-homepageimageblock {
+        margin-top: 2px;
+        width: 100%;
+        max-height: 100%;
+        #single-item-wrapper {
+          .single-item {
+            img {
+              max-height: 100%;
+              max-width: 100%;
+            }
+          }
+        }
+      }
+    }
+    .layout-content {
+      width: 100%;
+      padding: 0;
+      #block-healthtravelblock {
+        .health-item,
+        .travel-item {
+          max-width: 100%;
+          width: 100%;
+          padding: 0;
+          .single-travel-item.first,
+          .single-health-item.first {
+            .header {
+              img {
+                max-width: 100%;
+                width: 100%;
+                height: 100%;
+              }
+            }
+          }
+          .single-travel-item,
+          .single-health-item {
+            .header {
+              img {
+                max-width: 100px;
+                width: 100%;
+                min-height: 75px;
+              }
+            }
+          }
+        }
+      }
+    }
+    //Video region
+    #block-videosfrontblock {
+      .videos-item {
+        .single-video-item.first {
+          .header {
+            .img-w {
+              max-width: 100%;
+              margin: 0;
+              max-height: 100%;
+              img {
+                max-width: 100%;
+              }
+            }
+          }
+        }
+        .single-video-item {
+          .header {
+            .img-w {
+              margin: 0 20px 30px 0;
+              max-width: 69px;
+              max-height: 45px;
+              img {
+                max-width: 70px;
+              }
+            }
+          }
+        }
+      }
+    }
+    //Content bottom region
+    .layout-content-bottom {
+      width: 100%;
+      #block-morenews {
+        margin-top: 7px;
+        padding-bottom: 0;
+        .single-more-news-item {
+          .header {
+            width: 100%;
+            float: none;
+          }
+          .body {
+            padding-left: 0;
+          }
+        }
+      }
+    }
+    .layout-sidebar,
+    .layout-sidebar-bottom {
+      padding: 0;
+      width: 100%;
+    }
+    .layout-sidebar-bottom {
+      .trending-news-slider {
+        overflow: hidden;
+        margin-top: -31px;
+        .single-slide-item.first {
+          float: left;
+        }
+        .single-slide-item {
+          float: right;
+          max-width: 340px;
+          width: 100%;
+          min-height: 250px;
+        }
+      }
+    }
+    .container,
+    .region-slider-top,
+    .region-branding,
+    .region-header-second {
+      max-width: 750px;
+      width: 100%;
+    }
+
+  }
+
+}
+@media (max-width: 600px) {
+  footer {
+    .footer-middle {
+      #block-trendingnow,
+      #block-popularnews {
+        .single-news {
+          .block-image {
+            float: none;
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+
+  .taxonomy-term {
+    #block-news-live-content {
+      .views-row {
+        .node--type-news {
+          .node__content {
+            .header {
+              float: none;
+              max-width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .contact {
+    #contact-message-feedback-form {
+      label {
+        float: none;
+        text-align: center;
+        display: block;
+        width: 100%;
+        padding-bottom: 15px;
+      }
+      input {
+        width: 100%;
+        margin: 0;
+      }
+      .form-textarea-wrapper {
+        margin-left: 0;
+        textarea {
+          width: 100%;
+          margin: 0;
+        }
+      }
+      #edit-actions {
+        margin-left: 0;
+      }
+    }
+  }
+
+}

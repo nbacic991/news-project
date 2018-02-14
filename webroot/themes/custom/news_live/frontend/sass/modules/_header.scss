@@ -1,0 +1,70 @@
+// ========================================
+//
+// @file _header.scss
+// Header element on the page
+//
+// ========================================
+
+#block-news-live-branding {
+  .site-logo{
+    display: inline-block;
+    img {
+      max-width: 248px;
+      width: 100%;
+    }
+  }
+
+}
+#block-bannerdate {
+  width: 67.667%;
+  float: left;
+  .field--name-field-banner-date {
+    margin-top: 4px;
+  }
+}
+#block-bannerlogin {
+  width: 16.66666667%;
+  float: left;
+  .item-list {
+    overflow: hidden;
+    margin-right: -5px;
+    margin-top: 4px;
+  }
+}
+#block-bannericons {
+  width: 14.8%;
+  float: right;
+}
+.breadcrumbs {
+  margin-bottom: 7px;
+  #block-news-live-breadcrumbs {
+    ol {
+      padding-left: 0;
+      margin-bottom: 14px;
+      list-style-type: none;
+      li {
+        display: inline-block;
+        &::before {
+          content: "\f105";
+          @include fontawesome-icon;
+          padding: 0 8px;
+          color: #ccc;
+        }
+        a {
+          color: #007fef;
+          &:hover {
+            color: #333;
+          }
+        }
+        &.first-item {
+          &::before {
+            display: none;
+          }
+        }
+        &.last-item {
+          color: #777;
+        }
+      }
+    }
+  }
+}
